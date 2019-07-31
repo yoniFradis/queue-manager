@@ -51,7 +51,6 @@ public class AdminController {
 		dateOfBirth.setLenient(true);
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateOfBirth, true));
 	}
-
 	/**
 	 * <p>adminDashboard.</p>
 	 *

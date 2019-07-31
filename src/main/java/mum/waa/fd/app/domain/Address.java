@@ -31,12 +31,12 @@ public class Address {
 	@Column(name = "CITY")
 	private String city;
 
-	@Pattern(regexp = FamilyDoctorConstants.STATE_REGEX, message = FamilyDoctorConstants.STATE_VALIDATION)
+	//@Pattern(regexp = FamilyDoctorConstants.STATE_REGEX, message = FamilyDoctorConstants.STATE_VALIDATION)
 	@Column(name = "STATE")
 	private String state;
 
-	@Pattern(regexp = FamilyDoctorConstants.ZIPCODE_REGEX, message = FamilyDoctorConstants.ZIPCODE_VALIDATION)
-	@Column(name = "ZIPCODE")
+	//@Pattern(regexp = FamilyDoctorConstants.ZIPCODE_REGEX, message = FamilyDoctorConstants.ZIPCODE_VALIDATION)
+	@Column(name = "ZIP")
 	private String zipcode;
 
 	/**
