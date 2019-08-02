@@ -1,12 +1,11 @@
-INSERT INTO Address (street, city, state, zipcode) VALUES ('101 S. Main', 'Fairfield', 'IA', '52556');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('51 S. George', 'Georgetown', 'MI', '65434');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('23 Headley Ave', 'Seville', 'Georgia', '41234');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('1 N. Baton', 'Baton Rouge', 'LA', '33556');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('5001 Venice Dr.', 'Los Angeles', 'CA', '93736');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('1435 Channing Ave', 'Palo Alto', 'CA', '94301');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('42 Dogwood Dr.', 'Fairfield', 'IA', '52556');
-INSERT INTO Address (street, city, state, zipcode) VALUES ('501 Central', 'Mountain View', 'CA', '94707');
-
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('101 S. Main', 'Fairfield', 'IA', '52556');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('51 S. George', 'Georgetown', 'MI', '65434');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('23 Headley Ave', 'Seville', 'Georgia', '41234');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('1 N. Baton', 'Baton Rouge', 'LA', '33556');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('5001 Venice Dr.', 'Los Angeles', 'CA', '93736');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('1435 Channing Ave', 'Palo Alto', 'CA', '94301');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('42 Dogwood Dr.', 'Fairfield', 'IA', '52556');
+INSERT INTO Address (STREET, CITY, STATE, ZIP) VALUES ('501 Central', 'Mountain View', 'CA', '94707');
 
 -- hash bcrypt
 -- admin
@@ -48,14 +47,14 @@ INSERT INTO Doctor(FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, GENDER, LICENSE_NUMBER,
 
 INSERT INTO Admin(FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, GENDER, STAFF_NUMBER, PHONE, ADDRESS_ID, USER_ID) VALUES ('Admin', 'Super', '2008-08-08', 'MALE', '8888', '888-888-8888', 8, 8);
 
-INSERT INTO Invoice(DATE_CREATED, CCARD_4DIGITS, AMOUNT, `STATUS`) VALUES ('2015-08-13', '', '150', 'NEW');
-INSERT INTO Invoice(DATE_CREATED, CCARD_4DIGITS, AMOUNT, `STATUS`) VALUES ('2015-08-12', '', '250', 'NEW');
-INSERT INTO Invoice(DATE_CREATED, CCARD_4DIGITS, AMOUNT, `STATUS`) VALUES ('2015-08-11', '', '350', 'NEW');
-INSERT INTO Invoice(DATE_CREATED, CCARD_4DIGITS, AMOUNT, `STATUS`) VALUES ('2015-08-10', '', '450', 'NEW');
-INSERT INTO Invoice(DATE_CREATED, CCARD_4DIGITS, AMOUNT, `STATUS`) VALUES ('2015-08-09', '', '550', 'NEW');
+INSERT INTO Invoice(DATE_CREATED, CCARD_4D, AMOUNT, `STATUS`) VALUES ('2015-08-13', '', '150', 0);
+INSERT INTO Invoice(DATE_CREATED, CCARD_4D, AMOUNT, `STATUS`) VALUES ('2015-08-12', '', '250', 0);
+INSERT INTO Invoice(DATE_CREATED, CCARD_4D, AMOUNT, `STATUS`) VALUES ('2015-08-11', '', '350', 0);
+INSERT INTO Invoice(DATE_CREATED, CCARD_4D, AMOUNT, `STATUS`) VALUES ('2015-08-10', '', '450', 0);
+INSERT INTO Invoice(DATE_CREATED, CCARD_4D, AMOUNT, `STATUS`) VALUES ('2015-08-09', '', '550', 0);
 
-INSERT INTO Appointment(`DATE`, `TIME`, DESCRIPTION, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-09', '2:00PM', 'I have toothache', '200', 'NEW', 1, 1, 1);
-INSERT INTO Appointment(`DATE`, `TIME`, DESCRIPTION, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-10', '2:00PM', 'Something in my ear', '300', 'NEW', 2, 2, 1);
-INSERT INTO Appointment(`DATE`, `TIME`, DESCRIPTION, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-16', '2:00PM', 'Need cleaning', '400', 'NEW', 1, 3, 1);
-INSERT INTO Appointment(`DATE`, `TIME`, DESCRIPTION, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-16', '2:00PM', 'Nose bleeding', '500', 'NEW', 2, 4, 1);
-INSERT INTO Appointment(`DATE`, `TIME`, DESCRIPTION, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-16', '2:00PM', 'May need tooth extraction', '600', 'NEW', 1, 5, 1);
+INSERT INTO Appointment(`DATE`, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-09', '200', 0, 1, 1, 1);
+INSERT INTO Appointment(`DATE`, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-10', '300', 0, 2, 2, 1);
+INSERT INTO Appointment(`DATE`, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-16', '400', 0, 1, 3, 1);
+INSERT INTO Appointment(`DATE`, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-16', '500', 0, 2, 4, 1);
+INSERT INTO Appointment(`DATE`, ROOM, STATUS, DOCTOR_ID, INVOICE_ID, PATIENT_ID) VALUES ('2015-08-16', '600', 0, 1, 5, 1);

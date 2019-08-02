@@ -3,15 +3,8 @@ package mum.waa.fd.app.domain;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
@@ -54,6 +47,11 @@ public class Invoice {
 	@DateTimeFormat(pattern = FamilyDoctorConstants.DATE_FORMAT)
 	@Column(name = "DATE_PAID")
 	private Date datePaid;
+
+	@Valid
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "APPOINTMENT_ID")
+	private Appointment appointment;
 
 	@PrePersist
 	private void setDate() {

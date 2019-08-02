@@ -47,7 +47,7 @@ public abstract class Person {
 	private Gender gender = Gender.MALE;
 
 	@NotBlank(message = FamilyDoctorConstants.EMPTY_VALIDATION)
-	@Pattern(regexp = FamilyDoctorConstants.PHONE_REGEX, message = FamilyDoctorConstants.PHONE_VALIDATION)
+//	@Pattern(regexp = FamilyDoctorConstants.PHONE_REGEX, message = FamilyDoctorConstants.PHONE_VALIDATION)
 	@Column(name = "PHONE")
 	private String phone;
 
