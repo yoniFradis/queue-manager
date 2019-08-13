@@ -18,7 +18,7 @@
 	<!-- use-expressions enables URL level authorization -->
 	<security:http use-expressions="true">
 
-		<!-- can Use ControllerAdice instead -->
+		<!-- can Use ControllerAdice insteadd -->
 		<!--security:access-denied-handler error-page="/error-forbidden" / -->
 		<!-- Implemented with Web based URL - Controller "METHOD" level authorization -->
 		<!-- the more specific rules need to come first, followed by the more general 
