@@ -89,7 +89,6 @@ public class LoginController {
 		model.addAttribute("fail", true);
 		return "login";
 	}
-	//yoni
 	/**
 	 * <p>logout.</p>
 	 *

@@ -48,10 +48,10 @@ public class Invoice {
 	@Column(name = "DATE_PAID")
 	private Date datePaid;
 
-	@Valid
-	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "APPOINTMENT_ID")
-	private Appointment appointment;
+	//@Valid
+	//@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	//@JoinColumn(name = "APPOINTMENT_ID")
+	//private Appointment appointment;
 
 	@PrePersist
 	private void setDate() {
